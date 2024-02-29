@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:tami/screens/home_screen.dart';
+import 'package:tami/screens/login.dart';
 
 class splashScreen extends StatefulWidget{
   const splashScreen({super.key}); 
@@ -14,13 +15,12 @@ class splashScreen extends StatefulWidget{
 class _splashScreenState extends State<splashScreen> with SingleTickerProviderStateMixin{
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
     Future.delayed(Duration(seconds: 2), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (_) => const HomeScreen(),
+          builder: (_) => const login(),
         ),
       );
     });
@@ -42,7 +42,7 @@ class _splashScreenState extends State<splashScreen> with SingleTickerProviderSt
         width: double.infinity,
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.blue, Colors.green],
+            colors: [Color.fromARGB(255, 121, 147, 198), Color.fromARGB(255,157,157,212)],
             begin: Alignment.topRight,
             end: Alignment.bottomLeft,
           ),
@@ -51,7 +51,8 @@ class _splashScreenState extends State<splashScreen> with SingleTickerProviderSt
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
             Icon(
-              Icons.edit,
+              Icons.bakery_dining_outlined,
+              //Icons.breakfast_dining_outlined,
               size: 80,
               color: Colors.white,
             ),
