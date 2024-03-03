@@ -20,7 +20,8 @@ class login extends StatelessWidget {
                 top: 200,
                 left: 170,
                 child: Text(
-                  "Login",
+                  "Tami",
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 35,
                     fontWeight: FontWeight.bold,
@@ -36,6 +37,37 @@ class login extends StatelessWidget {
                     usernameField(),
                     //const SizedBox(height: 15),
                     passwordField(),
+                    const SizedBox(height: 55),
+                    Container(
+                      height: 50,
+                      width: 300,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFD59871),
+                        borderRadius: BorderRadius.circular(25)
+                      ),
+                      child: const Padding(
+                        padding: EdgeInsets.only(top: 10),
+                        child: Text(
+                          'Login',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white
+                          ),
+                        ),
+                      )
+                    ),
+                    const SizedBox(height: 20),
+                    const Text(
+                      'Forgot your password?',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 15,
+                        //fontWeight: FontWeight.bold,
+                        color: Colors.black45
+                      ),
+                    )
                   ],
                 )
               )
