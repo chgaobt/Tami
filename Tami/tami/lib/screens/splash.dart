@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:tami/screens/login.dart';
 
  class splash extends StatefulWidget {
   const splash({super.key});
@@ -8,7 +10,25 @@ import 'package:flutter/widgets.dart';
   State<splash> createState() => _splashState();
 }
 
-class _splashState extends State<splash> {
+class _splashState extends State<splash> with SingleTickerProviderStateMixin{
+
+  @override
+  void initState() {
+    super.initState();
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
+    Future.delayed(const Duration(seconds: 4), () {
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => const login()));
+    });
+  }
+
+  @override
+  void dispose() {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+      overlays: SystemUiOverlay.values
+    );
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,6 +42,7 @@ class _splashState extends State<splash> {
           ),
         ),
         child: const Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(
               Icons.bakery_dining_outlined,
