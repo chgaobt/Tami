@@ -16,7 +16,7 @@ class _splashState extends State<splash> with SingleTickerProviderStateMixin{
   void initState() {
     super.initState();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
-    Future.delayed(const Duration(seconds: 4), () {
+    Future.delayed(const Duration(seconds: 2), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => const login()));
     });
   }
@@ -36,7 +36,8 @@ class _splashState extends State<splash> with SingleTickerProviderStateMixin{
         width: double.infinity,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.blue,Colors.purple],
+            //colors: [Color.fromARGB(255,213,240,239),Color.fromARGB(255,213,152,113)],
+            colors: [Color.fromARGB(255,213,152,113),Color.fromARGB(255,213,152,113)],
             begin: Alignment.topRight,
             end: Alignment.bottomLeft,
           ),
