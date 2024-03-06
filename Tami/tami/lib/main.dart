@@ -4,7 +4,7 @@ import 'package:tami/screens/splash.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized;
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(const MyApp());
 }
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.robotoFlexTextTheme(),
       ),
-      home: const splash() 
+      home: const splash(),
     );
   }
 }
