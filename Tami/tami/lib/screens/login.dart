@@ -39,6 +39,7 @@ class login extends StatelessWidget {
                     passwordField(),
                     const SizedBox(height: 40),
                     Container(
+                      alignment: Alignment.center,
                       height: 50,
                       width: 300,
                       decoration: BoxDecoration(
@@ -46,8 +47,9 @@ class login extends StatelessWidget {
                         borderRadius: BorderRadius.circular(25)
                       ),
                       child: const Padding(
-                        padding: EdgeInsets.only(top: 10),
-                        child: Text(
+                        padding: EdgeInsets.symmetric(horizontal: 25.0),
+                        child: Center(
+                          child: Text(
                           'Login',
                           textAlign: TextAlign.center,
                           style: TextStyle(
@@ -55,6 +57,7 @@ class login extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                             color: Colors.white
                           ),
+                        ),
                         ),
                       )
                     ),
@@ -70,7 +73,7 @@ class login extends StatelessWidget {
                     ),
                     const SizedBox(height: 190),
                     const Text(
-                      "or Login With",
+                      "or Login with",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 20,
@@ -79,45 +82,43 @@ class login extends StatelessWidget {
                         color: Colors.black54
                       ),
                     ),
-                    const SizedBox(height: 30),
                     Row( 
-                      children: [
-                        Container(
-                          height: 45,
-                          width: 177,
-                          decoration: BoxDecoration(
-                            color: Colors.lightBlue,
-                            borderRadius: BorderRadius.circular(50)
-                          ),
-                        ),
-                  
-                        Container(
-                          height: 45,
-                          width: 177,
-                          decoration: BoxDecoration(
-                            color: Colors.lightBlue,
-                            borderRadius: BorderRadius.circular(50)
-                          ),
-                        ),
-                      ]
-                    ),
-                    const SizedBox(height: 50),
-                    const Text(
-                      "Don't have an account? Sign up here",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                        //color: Color.fromARGB(255,213,152,113)
-                        color: Colors.black54
-                      ),
-                    )
+            children: [
+              Container(
+                  height: 45,
+                  width: 177,
+                  decoration: BoxDecoration(
+                    color: Colors.lightBlue,
+                    borderRadius: BorderRadius.circular(50)
+                  ),
+                ),
+                Container(
+                  height: 45,
+                  width: 177,
+                  decoration: BoxDecoration(
+                    color: Colors.lightBlue,
+                    borderRadius: BorderRadius.circular(50)
+                  ),
+                ),
+                    
+              ]
+            ),
+          const SizedBox(height: 20),
+          const Text(
+            "Don't have an account? Sign up",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.bold,
+              //color: Color.fromARGB(255,213,152,113)
+              color: Colors.black54
+            ),
+          ),
                   ],
                 )
               )
             ],
-          )
-          
+          ),
         ],
       ),
     );
@@ -146,7 +147,8 @@ class login extends StatelessWidget {
                             left: 18,
                           ),
                           child: TextField(
-                            decoration: InputDecoration(
+                              obscureText: true,
+                              decoration: InputDecoration(
                               hintText: "Password",
                               hintStyle: TextStyle(
                                 color: Colors.black45
