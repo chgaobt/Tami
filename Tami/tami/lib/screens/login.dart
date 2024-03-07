@@ -13,8 +13,8 @@ class login extends StatelessWidget {
             children: [
               SizedBox(
                 height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width/0.6,
-                child: Image.asset('images/tami_loginScreen.png',fit: BoxFit.fill,),
+                width: MediaQuery.of(context).size.width,
+                child: Image.asset('images/loginScreen.png',fit: BoxFit.fill,),
               ),
               const Positioned(
                 top: 200,
@@ -30,14 +30,14 @@ class login extends StatelessWidget {
                 ),
               ),
               Positioned(
-                top: 300,
+                top: 275,
                 left: 45,
                 child: Column(
                   children: [
                     usernameField(),
                     //const SizedBox(height: 15),
                     passwordField(),
-                    const SizedBox(height: 55),
+                    const SizedBox(height: 40),
                     Container(
                       height: 50,
                       width: 300,
@@ -58,7 +58,7 @@ class login extends StatelessWidget {
                         ),
                       )
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 15),
                     const Text(
                       'Forgot your password?',
                       textAlign: TextAlign.center,
@@ -67,12 +67,57 @@ class login extends StatelessWidget {
                         //fontWeight: FontWeight.bold,
                         color: Colors.black45
                       ),
+                    ),
+                    const SizedBox(height: 190),
+                    const Text(
+                      "or Login With",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        //color: Color.fromARGB(255,213,152,113)
+                        color: Colors.black54
+                      ),
+                    ),
+                    const SizedBox(height: 30),
+                    Row( 
+                      children: [
+                        Container(
+                          height: 45,
+                          width: 177,
+                          decoration: BoxDecoration(
+                            color: Colors.lightBlue,
+                            borderRadius: BorderRadius.circular(50)
+                          ),
+                        ),
+                  
+                        Container(
+                          height: 45,
+                          width: 177,
+                          decoration: BoxDecoration(
+                            color: Colors.lightBlue,
+                            borderRadius: BorderRadius.circular(50)
+                          ),
+                        ),
+                      ]
+                    ),
+                    const SizedBox(height: 50),
+                    const Text(
+                      "Don't have an account? Sign up here",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        //color: Color.fromARGB(255,213,152,113)
+                        color: Colors.black54
+                      ),
                     )
                   ],
                 )
               )
             ],
           )
+          
         ],
       ),
     );
