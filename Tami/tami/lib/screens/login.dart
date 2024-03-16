@@ -1,3 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -12,6 +17,20 @@ class _loginState extends State<login>{
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
   
+  Future signin() async{
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: _usernameController.text.trim(), 
+      password: _passwordController.text.trim()
+    );
+  }
+
+  @override
+  void dispose() {
+    _usernameController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,7 +85,7 @@ class _loginState extends State<login>{
                                 child: TextField(
                                   controller: _usernameController,
                                   decoration: InputDecoration(
-                                      hintText: "Enter Username",
+                                      hintText: "Enter Email",
                                       hintStyle:
                                           TextStyle(color: Colors.black45),
                                       border: InputBorder.none),
@@ -78,56 +97,61 @@ class _loginState extends State<login>{
                       ),
                       //const SizedBox(height: 15),
                       Container(
-      width: 350,
-      decoration: BoxDecoration(
-          //color: const Color.fromARGB(150, 213,152,113),
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(25)),
-      child: Row(
-        children: [
-          Padding(
-            padding: EdgeInsets.only(left: 25),
-            child: Icon(Icons.lock_open_outlined, color: Colors.black),
-          ),
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.only(
-                left: 18,
-              ),
-              child: TextField(
-                obscureText: true,
-                controller: _passwordController,
-                decoration: InputDecoration(
-                    hintText: "Password",
-                    hintStyle: TextStyle(color: Colors.black45),
-                    border: InputBorder.none),
-              ),
-            ),
-          ),
-        ],
-      ),
-    ),
-                      const SizedBox(height: 40),
-                      Container(
-                          alignment: Alignment.center,
-                          height: 50,
-                          width: 300,
-                          decoration: BoxDecoration(
-                              color: const Color(0xFFD59871),
-                              borderRadius: BorderRadius.circular(25)),
-                          child: const Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 25.0),
-                            child: Center(
-                              child: Text(
-                                'Login',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white),
+                        width: 350,
+                        decoration: BoxDecoration(
+                          //color: const Color.fromARGB(150, 213,152,113),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(25)
+                        ),
+                        child: Row(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.only(left: 25),
+                              child: Icon(Icons.lock_open_outlined, color: Colors.black),
+                            ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                              left: 18,
+                            ),
+                            child: TextField(
+                              obscureText: true,
+                              controller: _passwordController,
+                              decoration: InputDecoration(
+                                hintText: "Password",
+                                hintStyle: TextStyle(color: Colors.black45),
+                                border: InputBorder.none
                               ),
                             ),
-                          )),
+                          ),
+                        ),
+                      ],
+                    ),
+                    ),
+                    const SizedBox(height: 40),
+                    GestureDetector(
+                      onTap: signin,
+                      child: Container(
+                            alignment: Alignment.center,
+                            height: 50,
+                            width: 300,
+                            decoration: BoxDecoration(
+                                color: const Color(0xFFD59871),
+                                borderRadius: BorderRadius.circular(25)),
+                            child: const Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 25.0),
+                              child: Center(
+                                child: Text(
+                                  'Login',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white),
+                                ),
+                              ),
+                            )),
+                    ),
                       const SizedBox(height: 15),
                       const Text(
                         'Forgot your password?',
