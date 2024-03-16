@@ -12,7 +12,7 @@ class _loginState extends State<login>{
 
   @override
   Widget build(BuildContext context) {
-    final _usernameController = TextEditingController;
+    final _usernameController = TextEditingController();
     final _passwordController = TextEditingController();
 
     return Scaffold(

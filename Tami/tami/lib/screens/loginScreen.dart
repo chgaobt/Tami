@@ -52,20 +52,20 @@ class _LoginState extends State<Login> {
                         Icons.person_outlined,
                         color: Colors.black,
                       ),
-
-
                       TextField(
-                                  
-                                  decoration: InputDecoration(
-                                      hintText: "Enter Username",
-                                      hintStyle:
-                                          TextStyle(color: Colors.black45),
-                                      border: InputBorder.none),
-                                ),
-                              ),
-                            ),
-                          ],
+                        controller: _usernameController,
+                        decoration: InputDecoration(
+                          hintText: "Enter Username",
+                          hintStyle: TextStyle(
+                            color: Colors.black45,
+                          ),
+                          border: InputBorder.none
                         ),
+                      ),
+                    ],
+                ),
+
+                
               ),
         
                       const SizedBox(height: 40),
