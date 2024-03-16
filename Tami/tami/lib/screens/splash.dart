@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:tami/screens/login.dart';
+import 'package:tami/screens/loginScreen.dart';
 
  class splash extends StatefulWidget {
   const splash({super.key});

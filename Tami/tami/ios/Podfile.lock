@@ -1,25 +1,25 @@
 PODS:
-  - Firebase/Auth (10.18.0):
+  - Firebase/Auth (10.22.0):
     - Firebase/CoreOnly
-    - FirebaseAuth (~> 10.18.0)
-  - Firebase/CoreOnly (10.18.0):
-    - FirebaseCore (= 10.18.0)
-  - firebase_auth (4.16.0):
-    - Firebase/Auth (= 10.18.0)
+    - FirebaseAuth (~> 10.22.0)
+  - Firebase/CoreOnly (10.22.0):
+    - FirebaseCore (= 10.22.0)
+  - firebase_auth (4.17.9):
+    - Firebase/Auth (= 10.22.0)
     - firebase_core
     - Flutter
-  - firebase_core (2.24.2):
-    - Firebase/CoreOnly (= 10.18.0)
+  - firebase_core (2.27.1):
+    - Firebase/CoreOnly (= 10.22.0)
     - Flutter
   - FirebaseAppCheckInterop (10.22.0)
-  - FirebaseAuth (10.18.0):
+  - FirebaseAuth (10.22.0):
     - FirebaseAppCheckInterop (~> 10.17)
     - FirebaseCore (~> 10.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
     - GoogleUtilities/Environment (~> 7.8)
     - GTMSessionFetcher/Core (< 4.0, >= 2.1)
     - RecaptchaInterop (~> 100.0)
-  - FirebaseCore (10.18.0):
+  - FirebaseCore (10.22.0):
     - FirebaseCoreInternal (~> 10.0)
     - GoogleUtilities/Environment (~> 7.12)
     - GoogleUtilities/Logger (~> 7.12)
@@ -78,12 +78,12 @@ EXTERNAL SOURCES:
     :path: Flutter
 
 SPEC CHECKSUMS:
-  Firebase: 414ad272f8d02dfbf12662a9d43f4bba9bec2a06
-  firebase_auth: 8e9ec02991ca4659111cc671c84d0c010b6bfb26
-  firebase_core: 0af4a2b24f62071f9bf283691c0ee41556dcb3f5
+  Firebase: 797fd7297b7e1be954432743a0b3f90038e45a71
+  firebase_auth: 610184b4f624545f81e0416bca60642b6818f27f
+  firebase_core: d6dfb4cb86a9ebd92464bb8736075fe967211c97
   FirebaseAppCheckInterop: 58db3e9494751399cf3e7b7e3e705cff71099153
-  FirebaseAuth: 12314b438fa76048540c8fb86d6cfc9e08595176
-  FirebaseCore: 2322423314d92f946219c8791674d2f3345b598f
+  FirebaseAuth: bbe4c68f958504ba9e54aee181adbdf5b664fbc6
+  FirebaseCore: 0326ec9b05fbed8f8716cddbf0e36894a13837f7
   FirebaseCoreInternal: bca337352024b18424a61e478460547d46c4c753
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   GoogleUtilities: d053d902a8edaa9904e1bd00c37535385b8ed152

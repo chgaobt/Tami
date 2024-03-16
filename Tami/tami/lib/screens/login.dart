@@ -3,18 +3,17 @@ import 'package:flutter/widgets.dart';
 
 class login extends StatefulWidget {
   const login({Key?key}) : super(key: key);
-
+  
   @override
   State<login> createState() => _loginState();
 }
 
 class _loginState extends State<login>{
-
+  final _usernameController = TextEditingController();
+  final _passwordController = TextEditingController();
+  
   @override
   Widget build(BuildContext context) {
-    final _usernameController = TextEditingController();
-    final _passwordController = TextEditingController();
-
     return Scaffold(
       body: Column(
         children: [
@@ -52,7 +51,7 @@ class _loginState extends State<login>{
                             //color: const Color.fromARGB(150, 213,152,113),
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(25)),
-                        child: const Row(
+                        child: Row(
                           children: [
                             Padding(
                               padding: EdgeInsets.only(left: 25),
