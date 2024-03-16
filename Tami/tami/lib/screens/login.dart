@@ -77,7 +77,36 @@ class _loginState extends State<login>{
                         ),
                       ),
                       //const SizedBox(height: 15),
-                      passwordField(),
+                      Container(
+      width: 350,
+      decoration: BoxDecoration(
+          //color: const Color.fromARGB(150, 213,152,113),
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(25)),
+      child: Row(
+        children: [
+          Padding(
+            padding: EdgeInsets.only(left: 25),
+            child: Icon(Icons.lock_open_outlined, color: Colors.black),
+          ),
+          Expanded(
+            child: Padding(
+              padding: EdgeInsets.only(
+                left: 18,
+              ),
+              child: TextField(
+                obscureText: true,
+                controller: _passwordController,
+                decoration: InputDecoration(
+                    hintText: "Password",
+                    hintStyle: TextStyle(color: Colors.black45),
+                    border: InputBorder.none),
+              ),
+            ),
+          ),
+        ],
+      ),
+    ),
                       const SizedBox(height: 40),
                       Container(
                           alignment: Alignment.center,
@@ -147,38 +176,6 @@ class _loginState extends State<login>{
                     ],
                   )))
             ],
-          ),
-        ],
-      ),
-    );
-  }
-
-  Container passwordField() {
-    return Container(
-      width: 350,
-      decoration: BoxDecoration(
-          //color: const Color.fromARGB(150, 213,152,113),
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(25)),
-      child: const Row(
-        children: [
-          Padding(
-            padding: EdgeInsets.only(left: 25),
-            child: Icon(Icons.lock_open_outlined, color: Colors.black),
-          ),
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.only(
-                left: 18,
-              ),
-              child: TextField(
-                obscureText: true,
-                decoration: InputDecoration(
-                    hintText: "Password",
-                    hintStyle: TextStyle(color: Colors.black45),
-                    border: InputBorder.none),
-              ),
-            ),
           ),
         ],
       ),
