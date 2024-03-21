@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -188,14 +188,26 @@ class _loginState extends State<login>{
                         ),
                       ]),
                       const SizedBox(height: 20),
-                      const Text(
-                        "Don't have an account? Sign up",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                            //color: Color.fromARGB(255,213,152,113)
-                            color: Colors.black54),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Don't have an account? ",
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                              //color: Color.fromARGB(255,213,152,113)
+                              color: Colors.black54),
+                          ),
+                          Text(
+                            " Sign Up!",
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blue
+                            ),
+                          ),
+                        ]
                       ),
                     ],
                   )))
