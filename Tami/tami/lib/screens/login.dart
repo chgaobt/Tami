@@ -7,7 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class login extends StatefulWidget {
-  const login({Key?key}) : super(key: key);
+  final VoidCallback signUpPage;
+  const login({Key?key, required this.signUpPage}) : super(key: key);
   
   @override
   State<login> createState() => _loginState();
@@ -199,13 +200,16 @@ class _loginState extends State<login>{
                               //color: Color.fromARGB(255,213,152,113)
                               color: Colors.black54),
                           ),
-                          Text(
+                          GestureDetector(
+                            onTap: widget.signUpPage,
+                            child: Text(
                             " Sign Up!",
                             style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.bold,
                               color: Colors.blue
                             ),
+                            )
                           ),
                         ]
                       ),
