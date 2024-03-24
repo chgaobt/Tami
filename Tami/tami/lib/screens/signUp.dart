@@ -107,40 +107,11 @@ class _signUpState extends State<signUp> {
                     ),
                     const SizedBox(height: 40),
                     GestureDetector(
-                      onTap: signin,
-                      child: Container(
-                            alignment: Alignment.center,
-                            height: 50,
-                            width: 300,
-                            decoration: BoxDecoration(
-                                color: const Color(0xFFD59871),
-                                borderRadius: BorderRadius.circular(25)),
-                            child: const Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 25.0),
-                              child: Center(
-                                child: Text(
-                                  'Login',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white),
-                                ),
-                              ),
-                            )),
+                      //implement sign up button
                     ),
                       const SizedBox(height: 15),
                       const Text(
-                        'Forgot your password?',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontSize: 15,
-                            //fontWeight: FontWeight.bold,
-                            color: Colors.black45),
-                      ),
-                      const SizedBox(height: 190),
-                      const Text(
-                        "or Login with",
+                        "or Sign Up with",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             fontSize: 20,
