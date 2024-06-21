@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:tami/auth.dart';
+//import 'package:tami/auth.dart';
 import 'package:tami/screens/login.dart';
 
  class splash extends StatefulWidget {

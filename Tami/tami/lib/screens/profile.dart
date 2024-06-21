@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:profile_photo/profile_photo.dart';
+import 'package:image_picker/image_picker.dart';
 
 class profile extends StatefulWidget {
   const profile({super.key});
@@ -11,6 +11,7 @@ class profile extends StatefulWidget {
 class _profileState extends State<profile> {
   @override
   Widget build(BuildContext context) {
+    //final ImageProvider? image;
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 225, 181, 153),
       appBar: AppBar(
@@ -53,14 +54,7 @@ class _profileState extends State<profile> {
           ),
           Padding(
             padding: EdgeInsets.only(left: 20),
-            child: ProfilePhoto(
-              totalWidth: 100, 
-              cornerRadius: 80,
-              outlineColor: Colors.white,
-              outlineWidth: 5,
-              color: Colors.grey,
-              image: const AssetImage('images/crissontLogo.png'),
-            ),
+            child: 
           ),
         ],
       ),

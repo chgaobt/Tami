@@ -34,8 +34,9 @@ dependencies:
   google_fonts: ^6.1.0
   firebase_auth: ^4.16.0
   firebase_core: ^2.24.2
+  firebase_storage: ^11.6.3
   icons_plus: ^4.0.0
-  profile_photo: ^1.0.3
+  image_picker: ^1.0.7
 
   
 
