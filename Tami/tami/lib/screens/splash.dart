@@ -37,7 +37,7 @@ class _splashState extends State<splash> with SingleTickerProviderStateMixin{
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             //colors: [Color.fromARGB(255,213,240,239),Color.fromARGB(255,213,152,113)],
-            colors: [Color.fromARGB(255,213,152,113),Color.fromARGB(255,213,152,113)],
+            colors: [Color.fromARGB(255, 225, 181, 153),Color.fromARGB(255, 225, 181, 153)],
             begin: Alignment.topRight,
             end: Alignment.bottomLeft,
           ),

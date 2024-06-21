@@ -1,8 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-import 'package:firebase_auth/firebase_auth.dart';
+//import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
+import 'package:tami/auth.dart';
+import 'package:tami/screens/profile.dart';
 
 class login extends StatefulWidget {
   // final VoidCallback signUpPage;
@@ -17,12 +19,12 @@ class _loginState extends State<login>{
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
   
-  Future signin() async{
-    await FirebaseAuth.instance.signInWithEmailAndPassword(
-      email: _usernameController.text.trim(), 
-      password: _passwordController.text.trim()
-    );
-  }
+  // Future signin() async{
+  //   await FirebaseAuth.instance.signInWithEmailAndPassword(
+  //     email: _usernameController.text.trim(), 
+  //     password: _passwordController.text.trim()
+  //   );
+  // }
 
   @override
   void dispose() {
@@ -57,7 +59,7 @@ class _loginState extends State<login>{
                     style: TextStyle(
                       fontSize: 35,
                       fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 213, 152, 113)),
+                      color: Color.fromARGB(255, 225, 181, 153),)
                   ),
                   SizedBox(height: 50,),
                   Container(
@@ -126,13 +128,16 @@ class _loginState extends State<login>{
                   ),
                   const SizedBox(height: 40),
                   GestureDetector(
-                    onTap: signin,
+                    //onTap: signin,
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => profile()));
+                    },
                     child: Container(
                       alignment: Alignment.center,
                       height: 50,
                       width: 300,
                       decoration: BoxDecoration(
-                        color: const Color(0xFFD59871),
+                        color: Color.fromARGB(255, 225, 181, 153),
                         borderRadius: BorderRadius.circular(25)),
                       child: const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 10),
