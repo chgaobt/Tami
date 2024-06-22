@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
+import 'package:tami/utils/ProfilePicture.dart';
 
 class profile extends StatefulWidget {
   const profile({super.key});
@@ -52,9 +52,9 @@ class _profileState extends State<profile> {
               ),),
             ],
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(left: 20),
-            child: 
+            child: ProfilePicture()
           ),
         ],
       ),

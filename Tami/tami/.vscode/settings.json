@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "/Users/chloeg/Documents/tami/Tami/tami/linux"
+    "cmake.sourceDirectory": "/Users/chloeg/Documents/tami/Tami/tami/linux",
+    "java.configuration.updateBuildConfiguration": "automatic"
 }
