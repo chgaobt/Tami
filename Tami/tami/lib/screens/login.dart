@@ -1,5 +1,5 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-//import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
@@ -19,12 +19,12 @@ class _loginState extends State<login>{
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
   
-  // Future signin() async{
-  //   await FirebaseAuth.instance.signInWithEmailAndPassword(
-  //     email: _usernameController.text.trim(), 
-  //     password: _passwordController.text.trim()
-  //   );
-  // }
+  Future signInUser() async{
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: _usernameController.text.trim(), 
+      password: _passwordController.text.trim()
+    );
+  }
 
   @override
   void dispose() {
@@ -130,7 +130,7 @@ class _loginState extends State<login>{
                   GestureDetector(
                     //onTap: signin,
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => profile()));
+                      signInUser();
                     },
                     child: Container(
                       alignment: Alignment.center,

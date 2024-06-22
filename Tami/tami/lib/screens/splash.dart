@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-//import 'package:tami/auth.dart';
+import 'package:tami/auth.dart';
 import 'package:tami/screens/login.dart';
 
  class splash extends StatefulWidget {
@@ -17,7 +17,7 @@ class _splashState extends State<splash> with SingleTickerProviderStateMixin{
     super.initState();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
     Future.delayed(const Duration(seconds: 2), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => login()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => Auth()));
     });
   }
 

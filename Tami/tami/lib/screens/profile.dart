@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:tami/utils/ProfilePicture.dart';
 
@@ -6,6 +7,10 @@ class profile extends StatefulWidget {
 
   @override
   State<profile> createState() => _profileState();
+}
+
+void logoutUser() {
+  FirebaseAuth.instance.signOut();
 }
 
 class _profileState extends State<profile> {
@@ -23,10 +28,10 @@ class _profileState extends State<profile> {
             padding: const EdgeInsets.only(right: 20),
             child: IconButton(
               onPressed: () {
-                //open drawer
+                logoutUser();
               },
               icon: const Icon(
-                Icons.menu,
+                Icons.logout,
                 color: Colors.white,
               )
             ),
