@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:tami/auth.dart';
 import 'package:tami/screens/profile.dart';
+import 'package:tami/screens/signUp.dart';
 
 class login extends StatefulWidget {
   // final VoidCallback signUpPage;
@@ -128,7 +129,6 @@ class _loginState extends State<login>{
                   ),
                   const SizedBox(height: 40),
                   GestureDetector(
-                    //onTap: signin,
                     onTap: () {
                       signInUser();
                     },
@@ -194,7 +194,9 @@ class _loginState extends State<login>{
                           color: Colors.black54),
                       ),
                       GestureDetector(
-                        //onTap: widget.signUpPage,
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => Signup()));
+                        },
                         child: Text(
                         " Sign Up!",
                         style: TextStyle(
